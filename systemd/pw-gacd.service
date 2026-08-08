@@ -1,0 +1,13 @@
+[Unit]
+Description=PW GACD
+After=pw-gamedbd.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/gacd
+ExecStart=/gacd/gacd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=PW GameDBD
+After=pw-uniquenamed.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/gamedbd
+ExecStart=/gamedbd/gamedbd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

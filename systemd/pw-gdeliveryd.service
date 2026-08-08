@@ -1,0 +1,13 @@
+[Unit]
+Description=PW GDeliveryD
+After=pw-authd.service pw-gfactiond.service pw-gacd.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/gdeliveryd
+ExecStart=/gdeliveryd/gdeliveryd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

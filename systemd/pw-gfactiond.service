@@ -1,0 +1,13 @@
+[Unit]
+Description=PW GFactionD
+After=pw-gamedbd.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/gfactiond
+ExecStart=/gfactiond/gfactiond
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

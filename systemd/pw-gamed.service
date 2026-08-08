@@ -1,0 +1,13 @@
+[Unit]
+Description=PW GameD (32-bit world server)
+After=pw-gdeliveryd.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/gamed
+ExecStart=/usr/bin/setarch i686 -X /gamed/gs gs01
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

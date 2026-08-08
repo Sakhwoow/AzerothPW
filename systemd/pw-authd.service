@@ -1,0 +1,13 @@
+[Unit]
+Description=PW AuthD (Java)
+After=pw-gamedbd.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/authd
+ExecStart=/usr/bin/java -jar authd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

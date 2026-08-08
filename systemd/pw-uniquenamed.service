@@ -1,0 +1,13 @@
+[Unit]
+Description=PW UniqueNamed
+After=pw-logservice.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/uniquenamed
+ExecStart=/uniquenamed/uniquenamed
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

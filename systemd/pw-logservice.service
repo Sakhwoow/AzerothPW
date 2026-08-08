@@ -1,0 +1,13 @@
+[Unit]
+Description=PW LogService
+After=network.target
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/logservice
+ExecStart=/logservice/logservice
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=PW GLinkD (client gateway port 29000)
+After=pw-gdeliveryd.service
+
+[Service]
+Type=simple
+User=pwserver
+WorkingDirectory=/glinkd
+ExecStart=/glinkd/glinkd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
